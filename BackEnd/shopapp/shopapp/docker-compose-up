@@ -1,0 +1,32 @@
+version: '3'
+services:
+  be-shopapp:
+    image: huytg/shopapp:latest
+    ports:
+      - "8080:8080"
+    environment:
+      MYSQL_HOST: db_shopapp
+      MYSQL_PORT: 3306
+      MYSQL_USER: huytg
+      MYSQL_PASSWORD: EXE201
+      MYSQL_DATABASE: shopapp
+    depends_on:
+      - db_shopapp
+    volumes:
+      - /root/images:/app/uploads
+
+  db_shopapp:
+    image: mysql:latest
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: EXE201
+      MYSQL_DATABASE: shopapp
+      MYSQL_USER: huytg
+      MYSQL_PASSWORD: EXE201
+    volumes:
+      - mysql-data:/var/lib/mysql
+volumes:
+  mysql-data:
