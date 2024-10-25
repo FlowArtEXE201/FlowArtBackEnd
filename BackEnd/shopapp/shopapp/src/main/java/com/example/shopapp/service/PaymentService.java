@@ -42,8 +42,8 @@ public class PaymentService implements IPaymentService{
     private final String API_KEY = "248f13ca-3857-4614-be00-9c8df85e8e09";
     private final String CHECK_SUM_KEY = "10377b815b0a808741ac734c9fad441778931e13eb7c661f6cd50adbb9082427";
     private final String PARTNER_CODE = "Fl0w4rt";
-    private String CANCEL_URL = "http://localhost:4200/";
-    private String RETURN_URL = "http://localhost:4200";
+    private String CANCEL_URL = "http://flowart.online";
+    private String RETURN_URL = "http://flowart.online";
 
     @Override
     public PaymentResponse.PaymentData createPayment(PaymentDTO paymentDTO, String token) throws Exception {
