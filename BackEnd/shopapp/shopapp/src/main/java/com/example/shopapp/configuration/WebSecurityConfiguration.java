@@ -84,7 +84,7 @@ public class WebSecurityConfiguration {
 
         // Cấu hình CORS
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200","http://34.92.182.137","http://34.92.182.137:8080","http:/flowart.online","http:/flowart.online:4200")); // Chỉ cho phép nguồn từ ứng dụng Angular
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200","http://34.92.182.137","http://34.92.182.137:8080","http:/flowart.online","http:/flowart.online:4200","http://34.92.182.137:4200")); // Chỉ cho phép nguồn từ ứng dụng Angular
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Các phương thức được phép
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Auth-Token")); // Chú ý chữ cái hoa
         configuration.setExposedHeaders(Arrays.asList("X-Auth-Token"));
